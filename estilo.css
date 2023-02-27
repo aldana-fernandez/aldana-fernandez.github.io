@@ -1,0 +1,832 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* PRELOADER */
+.contenedor-loader {
+    background-color: #8a736d;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    transition: all 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: loader 1.5s infinite ease-in-out;
+}
+
+.loader {
+    color: #F2D8DA;
+    font-size: 15px;
+    position: relative;
+    animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.loader:before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+}
+
+.loader:after {
+    left: 3.5em;
+}
+@keyframes loader{
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em
+    }
+    40%{
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+/* SECCION MENU */
+
+.menu {
+    text-align: center;
+    margin-left: 50px;
+    justify-content: center;
+}
+
+.menu .contenido-menu header .nav-bar {
+    position: fixed;
+    background-color: #A68C86;
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 50px;
+    transition: .5s;
+    margin-top: 30px;
+    z-index: 99;
+}
+
+.menu .contenido-menu header .nav-bar:hover {
+    color: white;
+    background-color: #A68C86;
+    border-color: #A68C86;
+    box-shadow: 0px 0px 30px 5px white;
+    transition: all 0.2s ease;
+}
+
+.menu .contenido-menu header nav {
+    position: fixed;
+    margin-left: 60px;
+    background-color: #A68C86;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: left;
+    z-index: 99;
+    display: none;
+    margin-top: 30px;
+    border: 1px solid white;
+}
+
+.menu .contenido-menu header nav a {
+    display: block;
+    color: white;
+    margin: 5px 5px 5px 5px;
+    text-decoration: none;
+    padding: auto;
+    font-family: "Nunito";
+    font-weight: bold;
+}
+
+/* SECCION INICIO */
+
+.inicio {
+    background-image: url('Fondo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio .contenido-banner {
+    background-color: #A68C86;
+    max-width: 400px;
+    max-height: 600px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.inicio .contenido-banner img {
+    border: 10px solid white;
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner img:hover {
+    filter: opacity(.8);
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.inicio .contenido-banner h2 {
+    font-family: "Nunito";
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.inicio .contenido-banner .redes a {
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 15px 10px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    color: #A68C86;
+    background-color: white;
+    border-color: #A68C86;
+    box-shadow: 0px 0px 30px 2px #F2D8DA;
+    transition: all 0.2s ease;
+}
+
+/* SECCION SOBRE MI */
+
+.sobremi {
+    background-color: #A68C86;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.sobremi .contenido-seccion .contenido-img-hola img {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 200px;
+    height: 200px;
+    border-bottom: 8px solid white;
+}
+
+.sobremi .contenido-seccion .contenido-img-hola img:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.sobremi .contenido-seccion h2 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: white;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+.sobremi .contenido-seccion p {
+    font-size: 28px;
+    color: white;
+    margin: 0%;
+    padding: 0 5%;
+    margin: 5px;
+}
+
+.sobremi .contenido-seccion .frase {
+    letter-spacing: 3px;
+    padding-top: 2%;
+}
+
+.sobremi .contenido-seccion .intereses h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+.sobremi .contenido-seccion .intereses .contenedor-intereses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.sobremi .contenido-seccion .intereses .contenedor-intereses .interes {
+    aspect-ratio: 1;
+    max-width: 100px;
+    width: 100%;
+    background-color: #8a736d;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.sobremi .contenido-seccion .intereses .contenedor-intereses .interes:hover {
+    box-shadow: 0px 0px 5px 3px #F2D8DA;
+    transition: all 0.2s ease;
+}
+
+.sobremi .contenido-seccion .intereses .contenedor-intereses .interes i {
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.sobremi .contenido-seccion .intereses .contenedor-intereses .interes span {
+    justify-content: center;
+    color: white;
+    font-family: "Nunito";
+    font-size: 18px;
+    text-align: center;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+/* SECCION SKILLS */
+
+.skills {
+    background: linear-gradient(#F2D8DA, rgba(94, 40, 40, 0.274)), url(Fondo3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 100px 0;
+    margin-top: 10px;
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.skills h3 {
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 80px;
+    color: white;
+    letter-spacing: 4px;
+    border-right: 5px solid #8a736d;
+    border-bottom: 5px solid #8a736d;
+    border-left: 5px solid #8a736d;
+    line-height: 110px;
+    background-color: #8a736d52;
+    border-radius: 0 0 30px 30px;
+    padding: 80px 30px 30px 30px;
+}
+
+.skills .contenido-seccion {
+    display: auto;
+    margin-top: 150px;
+    width: 50%;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.skills .contenido-seccion .skill .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: auto;
+}
+
+.skills .contenido-seccion .skill .info p {
+    font-size: 16px;
+    color: white;
+    font-family: "Nunito";
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 20px 0px;
+    justify-content: left;
+}
+
+.skills .contenido-seccion .skill .info .porcentaje {
+    font-size: 16px;
+    color: white;
+    font-family: "Nunito";
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 20px 0px;
+    justify-content: right;
+}
+
+.skills .contenido-seccion .skill .info .lista {
+    display: inline-block;
+    margin-right: 10px;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+}
+
+.skills .contenido-seccion .skill .barra {
+    background-color: #8a736d;
+    width: 100%;
+    height: 6px;
+    flex-direction: column;
+}
+
+/* ESTILO MEDIANTE JS */
+.skills .contenido-seccion .skill .barra-progreso1 {
+    background-color: white;
+    width: 40%;
+    height: 6px;
+    animation: progreso1 3s forwards;
+}
+
+.skills .contenido-seccion .skill .barra-progreso2 {
+    background-color: white;
+    width: 20%;
+    height: 6px;
+    animation: progreso2 3s forwards;
+}
+
+/* ANIMACIONES DE LAS BARRAS */
+
+@keyframes progreso1 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes progreso2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+/* SECCION CONTACTO */
+.contacto {
+    background-color: #A68C86;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contacto .contenido-seccion .foto-contacto img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 5%;
+    bottom: -18px;
+}
+
+.contacto .contenido-seccion h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 2px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+.contacto .contenido-seccion .datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+}
+
+.contacto .contenido-seccion .datos a {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    padding: 11px;
+    margin: 0px 15px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    text-decoration: none;
+    color: white;
+}
+
+.contacto .contenido-seccion .datos i {
+    margin: 3px;
+    justify-content: left;
+}
+
+.contacto .contenido-seccion .datos i:hover {
+    text-shadow: 2px 2px #6b5b5c;
+    transition: all 0.2s ease;
+}
+
+.contacto .contenido-seccion .datos span {
+    font-family: 'Nunito';
+    letter-spacing: 1px;
+}
+
+.contacto .contenido-seccion form {
+    aspect-ratio: 1;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    background-color: #F2D8DA;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.contacto .contenido-seccion form .entrada {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #8a736d;
+    line-height: 40px;
+}
+
+.contacto .contenido-seccion form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #8a736d;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+    color: #8a736d;
+}
+
+.contacto .contenido-seccion form textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #8a736d;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+    color: #8a736d;
+    height: 45px;
+}
+
+.contacto .contenido-seccion form button {
+    display: inline-block;
+    border: none;
+    background-color: #8a736d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 25px;
+}
+
+.contacto .contenido-seccion form button:hover {
+    box-shadow: 0px 0px 5px 3px #bea4a6;
+    transition: all 0.2s ease;
+}
+
+/* SECCION RESPONSIVE */
+
+@media screen and (max-width:1000px) {
+    .menu {
+        margin-left: 30px;
+    }
+
+    .inicio {
+        background: #F2D8DA;
+        height: 90vh;
+    }
+
+    .inicio .contenido-banner {
+        max-width: 400px;
+        margin-top: 40px;
+        max-height: 600px;
+    }
+
+    .inicio .contenido-banner h1 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 50px;
+    }
+
+    .inicio .contenido-banner h2 {
+        font-size: 32px;
+    }
+
+    .inicio .contenido-banner .redes a {
+        width: 50px;
+        height: 50px;
+        line-height: 60px;
+    }
+
+    .inicio .contenido-banner .redes i {
+        font-size: 30px;
+    }
+
+    .skills {
+        height: 80vh;
+    }
+
+    .skills h3 {
+        text-align: right;
+        font-size: 130px;
+        border-right: none;
+        border-bottom: 10px solid #8a736d;
+        border-left: none;
+        line-height: 60px;
+        background-color: transparent;
+        border-radius: 0px;
+        padding: 0px 10px 35px 00px;
+        top: 200px;
+        left: 0px;
+    }
+
+    .skills .contenido-seccion {
+        margin-top: 300px;
+        width: 80%;
+    }
+
+    .skills .contenido-seccion .skill .info p {
+        font-size: 30px;
+
+    }
+
+    .skills .contenido-seccion .skill .info .porcentaje {
+        font-size: 30px;
+    }
+
+    .contacto .contenido-seccion .foto-contacto img {
+        width: 200px;
+        height: 200px;
+        left: -60px;
+        bottom: -12px;
+    }
+
+    .contacto .contenido-seccion h3 {
+        font-size: 100px;
+    }
+
+    .contacto .contenido-seccion .datos a {
+        padding: 0px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .contacto .contenido-seccion form {
+        max-width: 400px;
+        max-height: 500px;
+        padding: 15px;
+    }
+
+    .contacto .contenido-seccion form .entrada {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .menu {
+        margin-left: 10px;
+    }
+
+    .menu .contenido-menu header .nav-bar {
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 30px;
+        z-index: 99;
+    }
+
+    .menu .contenido-menu header nav {
+        margin-left: 35px;
+        margin-top: 30px;
+    }
+
+    .inicio {
+        background: #F2D8DA;
+        height: 70vh;
+    }
+
+    .inicio .contenido-banner {
+        max-width: 250px;
+        max-height: 400px;
+        margin-top: 30px;
+    }
+
+    .inicio .contenido-banner img {
+        border: 5px solid white;
+    }
+
+    .inicio .contenido-banner h1 {
+        margin-top: 12px;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+
+    .inicio .contenido-banner h2 {
+        font-size: 18px;
+    }
+
+    .inicio .contenido-banner .redes a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin: 8px 1px 20px;
+    }
+
+    .inicio .contenido-banner .redes i {
+        font-size: 15px;
+    }
+
+    .sobremi .contenido-seccion .contenido-img-hola img {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        width: 110px;
+        height: 120px;
+        border-bottom: 5px solid white;
+    }
+
+    .sobremi .contenido-seccion h2 {
+        font-size: 35px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .sobremi .contenido-seccion p {
+        font-size: 18px;
+        padding: 0 5%;
+        margin: 5px;
+    }
+
+    .sobremi .contenido-seccion .frase {
+        letter-spacing: 1px;
+        padding-top: 0%;
+    }
+
+    .sobremi .contenido-seccion .intereses h3 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        padding: 10px;
+    }
+
+    .sobremi .contenido-seccion .intereses .contenedor-intereses .interes {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sobremi .contenido-seccion .intereses .contenedor-intereses {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .sobremi .contenido-seccion .intereses .contenedor-intereses .interes i {
+        font-size: 25px;
+        margin-bottom: 2px;
+    }
+
+    .sobremi .contenido-seccion .intereses .contenedor-intereses .interes span {
+        font-size: 15px;
+    }
+
+    .skills {
+        height: 80vh;
+        position: relative;
+        justify-content: center;
+    }
+
+    .skills h3 {
+        text-align: right;
+        font-size: 60px;
+        letter-spacing: 2px;
+        border-right: none;
+        border-bottom: 10px solid #8a736d;
+        border-left: none;
+        line-height: 0px;
+        background-color: transparent;
+        border-radius: 0px;
+        padding: 0px 0px 35px 0px;
+        top: 180px;
+        left: 0px;
+    }
+
+    .skills .contenido-seccion {
+        margin-top: 230px;
+        width: 80%;
+    }
+
+    .skills .contenido-seccion .skill .info p {
+        font-size: 12px;
+
+    }
+
+    .skills .contenido-seccion .skill .info .porcentaje {
+        font-size: 12px;
+    }
+
+    .skills .contenido-seccion .skill .info .lista {
+        height: 6px;
+        width: 6px;
+    }
+
+    .skills .contenido-seccion .skill .barra {
+        height: 4px;
+    }
+
+    .skills .contenido-seccion .skill .barra-progreso1 {
+        height: 4px;
+    }
+
+    .skills .contenido-seccion .skill .barra-progreso2 {
+        height: 4px;
+    }
+
+    .contacto .contenido-seccion .foto-contacto img {
+        width: 100px;
+        height: 100px;
+        left: -32px;
+        bottom: -5px;
+    }
+
+    .contacto .contenido-seccion h3 {
+        font-size: 30px;
+    }
+
+    .contacto .contenido-seccion .datos a {
+        border-radius: 15px;
+        padding: 5px;
+        margin: 0px;
+        font-size: 12px;
+    }
+
+    .contacto .contenido-seccion form {
+        max-width: 260px;
+        height: 250px;
+        padding: 15px;
+    }
+
+    .contacto .contenido-seccion form .entrada {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 5px;
+    }
+
+    .contacto .contenido-seccion form button {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin-left: 36%;
+        margin-top: 0px;
+    }
+}
